@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Angular SPA sample</title>
+	<link href="app/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="app/assets/css/animate.css" rel="stylesheet">
+	<link href="app/assets/css/custom-style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="page-header">
+		<h1>Create an angular module<small> that meets the following requirements:</small></h1>
+	</div>
+	<div class="container animated bounce" ng-view></div>
+
+
+		<!------------- Libraries ---------->
+
+		<script type="text/javascript" src="app/libraries/angular.js"></script>
+		<script type="text/javascript" src="app/libraries/angular-route.min.js"></script>
+		<script type="text/javascript" src="app/libraries/angular-animate.js"></script>
+		<script type="text/javascript" src="app/libraries/script.js"></script>
+		<script type="text/javascript" src="app/libraries/angular-ui-router.js"></script>
+		
+		
+		
+		
+
+		<!------------- Modules ---------->
+		
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/lazy.js"></script>
+
+		<!------------- Filters ---------->
+
+		<script type="text/javascript" src="app/filters/uniqueFilter.js"></script>
+
+
+		<!------------- Services ---------->
+
+		<script type="text/javascript" src="app/services/PassNameService.js"></script>
+		<script type="text/javascript" src="app/services/FetchJson.js"></script>
+
+		<!------------- Directives ---------->
+
+		<script type="text/javascript" src="app/directives/phoneInput.js"></script>
+
+
+
+</body>
+</html>

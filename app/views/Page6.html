@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <h1> #6</h1>
+  <p>Uses ui-route to have multiple ui-views in the page. Each view should load a content based on the route.</p>
+
+ <div class="alert alert-success" role="alert">Hey, <h2 class="animated jello">{{::name}}</h2> Click in the links below to show the different contents</div>
+ 
+ <a class="btn btn-primary btn-lg" ui-sref="content1" role="button">Show content 1</a>
+ <a class="btn btn-primary btn-lg" ui-sref="content2" role="button">Show content 2</a>
+ <a class="btn btn-primary btn-lg" ui-sref="content3" role="button">Show content 3</a>
+ <div class="separator50"></div>
+<div ui-view="content1"></div>
+<div ui-view="content2"></div>
+<div ui-view="content3"></div>
+
+ <div class="separator50"></div>
+  <h2 class="label label-success no-inline-label animated rubberBand">The end - Thank you!!</h2>
+</div>

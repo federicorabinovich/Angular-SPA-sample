@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <h1> #1</h1>
+  <p>It must have multiple routes, each with its own controller. In each route have a link that leads you to the next route. You need to create a method which can lazy load controllers between route changes. This means that these controllers have to be in different js files and must be loaded on demand, when route changes, not at page load.
+</p>
+ <div class="alert alert-success" role="alert">Right now, page1Controller.js is taking controll and was loaded dynamically. Check two-way-binding with your name</div>
+ <form novalidate>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Your name (default value is {{::name}})</label>
+	<h2 ng-show="nombre==name || nombre==''" class="label label-danger no-inline-label animated rubberBand fade">Please remove default value and enter your name so we can show that value in the next route</h2>
+	<input class="form-control" type="text" ng-model="nombre" ng-change="setName()" ng-click="resetName()" required/>
+	<h3>This is your name: {{nombre}}</h3> 
+  </div>
+ </form>
+ <div class="separator100"></div>
+  <span  ng-hide="nombre==name || nombre==''" class="fadein fade"><a class="btn btn-primary btn-lg" href="#page2" role="button">Go to next route</a></span>
+  <span ng-hide="nombre==name || nombre==''" class="alert alert-warning mar-left-50 fade" role="alert">Page2Controller.js will be load after you click</span>
+</div>

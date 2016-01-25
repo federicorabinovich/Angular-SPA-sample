@@ -1,0 +1,40 @@
+<div class="jumbotron">
+  <h1> #4</h1>
+  <p>Has a filter that takes the following array and arranges its items by "class" and orders them alphabetically by "name" and "grade" with "name" having priority over "grade" in the order:</br>
+[</br>
+    { name : "John", grade : "A", class : "Geography" },</br>
+    { name : "Alice", grade : "B", class : "History" },</br>
+    { name : "Alice", grade : "C", class : "Geography" },</br>
+    { name : "Brian", grade : "B", class : "English" },</br>
+    { name : "Brian", grade : "A", class : "History" },</br>
+    { name : "Alice", grade : "D", class : "English" },</br>
+    { name : "John", grade : "C", class : "English" },</br>
+    { name : "John", grade : "D", class : "History" },</br>
+    { name : "Brian", grade : "A", class : "Geography" }</br>
+]
+</p>
+ <div class="alert alert-success" role="alert">Hey, <h2 class="animated swing">{{::name}}</h2> We are fetching a Json file (studentGrades.json) to bring the data. Following is the formated data</div>
+ <h2 class="label label-danger no-inline-label animated rubberBand">You will see for each "class" the rows ordered first by "name" and secondly by "grade",</br> so please note that having only one grade per student and class, </br>you won't actually see any order at all regarding "grade" attribute</h2>
+
+<div ng-repeat="class in data | orderBy:'class' |  uniqueFilter:'class'">
+	 <div class="separator50"></div>
+	<h3>{{class.class}}</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Grade</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in data | filter: {class: class.class}:true| orderBy: ['name','grade']">
+				<td>{{item.name}}</td>
+				<td>{{item.grade}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+ <div class="separator100"></div>
+  <span><a class="btn btn-primary btn-lg" href="#page5" role="button">Go to next route</a></span>
+</div>
